@@ -20,7 +20,7 @@ func (n *NextNumber) Next(args *Args, reply *int) error {
 		return errors.New("tHE ARGUMENTS CANNOT BE EMPTY FOOL")
 	}
 
-	*reply += 1
+	*reply = args.A + 1
 
 	return nil
 }
