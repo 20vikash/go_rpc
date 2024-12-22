@@ -15,7 +15,7 @@ type Args struct {
 	A int
 }
 
-func (n *NextNumber) nextNumber(args *Args, reply *int) error {
+func (n *NextNumber) Next(args *Args, reply *int) error {
 	if args == nil {
 		return errors.New("tHE ARGUMENTS CANNOT BE EMPTY FOOL")
 	}
@@ -36,6 +36,6 @@ func main() {
 	}
 	defer listener.Close()
 
-	fmt.Println("Server is listening on port 8080...")
+	fmt.Println("Server is listening on port 4000...")
 	rpc.Accept(listener) // Accept incoming RPC connections
 }
